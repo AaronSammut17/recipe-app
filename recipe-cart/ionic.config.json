@@ -1,0 +1,7 @@
+{
+  "name": "Recipe Cart",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
