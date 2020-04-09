@@ -1,0 +1,17 @@
+#ingredients {
+    ion-label {
+        font-weight: bold;
+
+        h6 {
+            color: var(--ion-color-medium);
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        ion-text{
+            color: var(--ion-color-primary);
+        }
+    }
+}

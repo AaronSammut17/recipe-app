@@ -1,9 +1,40 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>recipe-ingredients</ion-title>
+    <!-- ion-buttons will sort the buttons according to slot (start, middle, end). -->
+    <ion-buttons slot="start">
+      <!-- will adapt the styling to fit the toolbar, IF it is in ion-buttons. -->
+      <ion-button>
+        <!-- icon-only will make this icon bigger and have a round ripple effect. -->
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Recipe</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list id="ingredients" lines="full">
+    <ion-item>
+      <!-- The image on the left of the item. -->
+      <ion-thumbnail slot="start">
+        <img src="/assets/shapes.svg" alt="">
+      </ion-thumbnail>
 
+      <!-- The item label. -->
+      <ion-label>Ingredient</ion-label>
+
+      <!-- The measurement on the right. -->
+      <ion-label slot="end" class="ion-text-right">
+        <h6>Amount</h6>
+        <ion-text>200g</ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
