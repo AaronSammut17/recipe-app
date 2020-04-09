@@ -1,0 +1,77 @@
+#recipe-banner {
+    background-color: #666;
+    height: 33vh;
+}
+
+#summary-card {
+    margin-top: -65px;
+    
+    ion-card-header {
+        text-align: center;
+
+        ion-card-subtitle {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        ion-card-title {
+            font-weight: bold;
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+    
+    .rating {
+        ion-icon {
+            font-size: 1.25rem;
+            margin: 0 2px;
+        }
+    }
+}
+
+#stats {
+    ion-icon {
+        color: var(--ion-color-medium);
+        display: block;
+        font-size: 2.5rem;
+        margin: auto;
+    }
+
+    ion-label {
+        color: var(--ion-color-medium);
+        display: block;
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-top: 8px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .separator-col{
+        // we want that all content connected to this element react to its position.
+        position: relative;
+
+        // we want both ::before and ::after to have the same basic style.
+        &::before, &::after {
+            border-right: 1px solid var(--ion-color-medium);
+            content: '';
+            display: block;
+            height: 2.5rem;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            transform: skewX(-15deg);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+    }
+}
