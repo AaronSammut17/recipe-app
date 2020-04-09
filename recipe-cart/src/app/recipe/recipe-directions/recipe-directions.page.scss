@@ -1,0 +1,17 @@
+#directions {
+    counter-reset: directions;
+
+    ion-label[slot="start"] {
+        margin-right: 16px;
+        max-width: 2.5rem;
+
+        &::before {
+            content: counter(directions);
+            counter-increment: directions;
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}
