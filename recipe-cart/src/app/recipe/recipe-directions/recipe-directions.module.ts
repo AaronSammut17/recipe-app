@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RecipeDirectionsPageRoutingModule } from './recipe-directions-routing.module';
 
 import { RecipeDirectionsPage } from './recipe-directions.page';
+import { SharedComponentsModule } from 'src/app/modules/shared-components/shared-components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecipeDirectionsPageRoutingModule
+    RecipeDirectionsPageRoutingModule,
+    SharedComponentsModule
   ],
   declarations: [RecipeDirectionsPage]
 })

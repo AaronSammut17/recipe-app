@@ -1,1 +1,26 @@
+<!-- Tabs are a root level element, they will control what loads on this page. -->
+<!-- When using tabs, no other component will show
+     on this page unless it is loaded by the tabs. -->
+<ion-tabs>
+    <ion-tab-bar slot="bottom">
 
+        <!-- The ingriedent page tab. -->
+        <ion-tab-button tab="ingredients">
+            <ion-icon name="cart-outline"></ion-icon>
+            <ion-label>Ingredients</ion-label>
+        </ion-tab-button>
+
+        <!-- The summary page tab. -->
+        <ion-tab-button tab="summary">
+            <ion-icon name="reader-outline"></ion-icon>
+            <ion-label>Summary</ion-label>
+        </ion-tab-button>
+
+        <!-- The directions page tab. -->
+        <ion-tab-button tab="directions">
+            <ion-icon name="compass-outline"></ion-icon>
+            <ion-label>Directions</ion-label>
+        </ion-tab-button>
+
+    </ion-tab-bar>
+</ion-tabs>

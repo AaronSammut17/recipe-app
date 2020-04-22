@@ -11,9 +11,19 @@ const routes: Routes = [
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
+
+  // The parent page for all recipe interfaces.
   {
-    path: 'recipe-tabs',
-    loadChildren: () => import('./recipe/recipe-tabs/recipe-tabs.module').then( m => m.RecipeTabsPageModule)
+    path: 'recipe',
+    children: [
+      // http: //localhost:4200/recipe/view
+      {
+        // This is the path nested under /recipe
+        path: 'view',
+        // This is the module/page that will load when we access this link. 
+        loadChildren: () => import('./recipe/recipe-tabs/recipe-tabs.module').then( m => m.RecipeTabsPageModule)
+      }
+    ]
   },
   {
     path: 'recipe-summary',
