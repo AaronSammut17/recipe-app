@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeService } from 'src/app/services/recipe.service';
 
 @Component({
   selector: 'app-recipe-home',
@@ -21,9 +22,14 @@ export class RecipeHomePage implements OnInit {
       slidesPerView: 1.25
   };
 
-  constructor() { }
+  constructor(
+    public recipeService: RecipeService
+    ) { }
 
   ngOnInit() {
+    console.log("Starting to load...");
+        this.recipeService.preload();
+        console.log("Finished.");
   }
 
 }
