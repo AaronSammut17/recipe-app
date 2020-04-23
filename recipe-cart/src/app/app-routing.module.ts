@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'recipe',
     pathMatch: 'full'
   },
   {
@@ -16,7 +16,13 @@ const routes: Routes = [
   {
     path: 'recipe',
     children: [
-      // http: //localhost:4200/recipe/view
+      // http://localhost:4200/recipe
+      {
+        path: '',
+        loadChildren: () => import('./recipe/recipe-home/recipe-home.module').then( m => m.RecipeHomePageModule)
+      },
+
+      // http://localhost:4200/recipe/view
       {
         // This is the path nested under /recipe
         path: 'view',
@@ -26,16 +32,20 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'recipe-summary',
+    path: 'recipe-summary', // http://localhost:8100/recipe-summary
     loadChildren: () => import('./recipe/recipe-summary/recipe-summary.module').then( m => m.RecipeSummaryPageModule)
   },
   {
-    path: 'recipe-ingredients',
+    path: 'recipe-ingredients', // http://localhost:8100/recipe-ingredients
     loadChildren: () => import('./recipe/recipe-ingredients/recipe-ingredients.module').then( m => m.RecipeIngredientsPageModule)
   },
   {
-    path: 'recipe-directions',
+    path: 'recipe-directions', // http://localhost:8100/recipe-directions
     loadChildren: () => import('./recipe/recipe-directions/recipe-directions.module').then( m => m.RecipeDirectionsPageModule)
+  },
+  {
+    path: 'recipe-home',
+    loadChildren: () => import('./recipe/recipe-home/recipe-home.module').then( m => m.RecipeHomePageModule)
   }
 ];
 

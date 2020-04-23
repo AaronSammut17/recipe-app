@@ -3,7 +3,7 @@
     <!-- ion-buttons will sort the buttons according to slot (start, middle, end). -->
     <ion-buttons slot="start">
       <!-- will adapt the styling to fit the toolbar, IF it is in ion-buttons. -->
-      <ion-button>
+      <ion-button (click)="navigate()">
         <!-- icon-only will make this icon bigger and have a round ripple effect. -->
         <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
       </ion-button>
@@ -14,7 +14,14 @@
 
     <ion-buttons slot="end">
       <ion-button>
-        <ion-icon name="heart" slot="icon-only" color="danger"></ion-icon>
+        <!--
+            [name] will change to 'heart' if favorited
+            or 'heart-outline' if not.
+        -->
+        <ion-icon 
+            [name]="favorite ? 'heart' : 'heart-outline'" 
+            slot="icon-only" 
+            [color]="favorite ? 'danger' : 'dark'"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
