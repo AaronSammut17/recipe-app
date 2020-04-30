@@ -7,28 +7,29 @@
 <ion-content>
   <!-- THe categories of recipes available for the user. -->
   <ion-slides [options]="categorySlideOpts" class="recipe-slider">
-    <ion-slide *ngFor="let i of [1, 2, 3, 4, 5]">
+    <ion-slide *ngFor="let category of categories">
       <div class="recipe-card">
         <div 
             [ngStyle]="{ 'background-image': 'url(/assets/shapes.svg)' }" 
             class="background-image ion-activatable ripple-parent">
             <ion-ripple-effect></ion-ripple-effect>
           </div>
-        <h4 class="recipe-title">Category</h4>
+        <h4 class="recipe-title">{{ category }}</h4>
       </div>
     </ion-slide>
   </ion-slides>
 
   <!-- THe categories of recipes available for the user. -->
-  <ion-slides [options]="recipeSlideOpts" class="recipe-slider">
-    <ion-slide *ngFor="let i of [1, 2, 3, 4, 5]">
+  <ion-slides [options]="recipeSlideOpts
+  " class="recipe-slider">
+    <ion-slide *ngFor="let recipe of recipes">
       <div class="recipe-card">
         <div 
             [ngStyle]="{ 'background-image': 'url(/assets/shapes.svg)' }" 
             class="background-image ion-activatable ripple-parent">
             <ion-ripple-effect></ion-ripple-effect>
           </div>
-        <h4 class="recipe-title">Recipe</h4>
+        <h4 class="recipe-title">{{ recipe.attr.name }}</h4>
       </div>
     </ion-slide>
   </ion-slides>

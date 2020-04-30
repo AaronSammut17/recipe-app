@@ -1,7 +1,7 @@
 .recipe-slider {
     --slides-margin: 8px;
-    --border-radius: 6px; 
-
+    --border-radius: 6px;
+    
     padding: var(--slides-margin, 8px);
 
     .recipe-card {
@@ -20,7 +20,7 @@
 
         .recipe-title {
             text-align: left;
-            margin: var(--slides-margin, 8px) 0,0;
+            margin: var(--slides-margin, 8px) 0 0;
         }
     }
 }

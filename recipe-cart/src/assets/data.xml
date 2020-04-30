@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <data>
-    <category name="curry">
+    <category name="Curry">
         <recipe name="Chicken Tikka Masala" url="chicken-tikka-masala" serves="4" duration="420" description="This rich and creamy flavoursome Chicken tikka rivals any Indian restaurant! Why go out when you can make it better at home! With aromatic golden chicken pieces swimming in an incredible curry sauce, this Chicken Tikka Masala recipe is one of the best you will try!">
             <ingredients>
                 <name>Chicken Thigh</name>
@@ -64,6 +64,76 @@
     </category>
 
     <category name="Fakeaways">
+        <recipe name="Hoisin Chicken" url="hoisin-chicken" serving="4" duration="20" description="Using store-bought hoisin sauce makes this chicken stir-fry easy and fast. You can substitute any quick-cooking vegetable, such as mushrooms, thinly sliced carrots, or broccoli florets. Round out the meal with Steamed White Rice.">
+            <ingredient>
+                <name>Vegetable Oil</name>
+                <measurement type="tbsp">3</measurement>
+            </ingredient>
+
+            <ingredient>
+                <name>Medium Onion, sliced</name>
+                <measurement type="units">1</measurement>
+            </ingredient>
+
+            <ingredient>
+                <name>Red Bell Pepper, thinly sliced</name>
+                <measurement type="units">1</measurement>
+            </ingredient>
+
+            <ingredient>
+                <name>Boneless, Skinless Chicken</name>
+                <measurement type="g">450</measurement>
+            </ingredient>
+
+            <ingredient>
+                <name>Salt and Pepper</name>
+            </ingredient>
+
+            <ingredient>
+                <name>Snow Peas, trimmed</name>
+                <measurement type="g">150</measurement>
+            </ingredient>
+
+            <ingredient>
+                <name>Crushed Red Chili Flakes</name>
+                <measurement type="tsp">2</measurement>
+            </ingredient>
+
+            <ingredient>
+                <name>Minced fresh Ginger</name>
+                <measurement type="tsp">1</measurement>
+            </ingredient>
+
+            <ingredient>
+                <name>Hoisin Sauce</name>
+                <measurement type="cup">0.3</measurement>
+            </ingredient>
+
+            <ingredient>
+                <name>Water</name>
+                <measurement type="tbsp">2</measurement>
+            </ingredient>
+
+            <ingredient>
+                <name>Dry-Roasted Peanuts or Cashews</name>
+                <measurement type="cup">0.3</measurement>
+            </ingredient>
+
+            <direction>Heat 2 Tbs. of the oil in a large skillet over medium-high heat.</direction>
+            <direction>Add the onion and cook for 2 to 3 min.</direction>
+            <direction>Add the bell pepper and cook until both the pepper and onion are browned around the edges, 4 to 6 min.</direction>
+            <direction>Remove the vegetables from the skillet; set aside.</direction>
+            <direction>Pour the remaining 1 Tbs. oil in the skillet. </direction>
+            <direction>Sprinkle the chicken with salt and pepper, add it to the oil, and cook, stirring frequently, so that all sides brown, 2 to 3 min.</direction>
+            <direction>Stir in the snow peas and sprinkle in some red chile flakes.</direction>
+            <direction>Add the ginger, if using.</direction>
+            <direction>Reduce the heat to medium low and stir in the hoisin sauce and water.</direction>
+            <direction>Simmer for 1 min. to wilt the snow peas and finish cooking the chicken.</direction>
+            <direction>Sprinkle with the peanuts or cashews and serve over rice.</direction>
+        </recipe>
+    </category>
+
+    <category name="Eggcelent">
         <recipe name="Hoisin Chicken" url="hoisin-chicken" serving="4" duration="20" description="Using store-bought hoisin sauce makes this chicken stir-fry easy and fast. You can substitute any quick-cooking vegetable, such as mushrooms, thinly sliced carrots, or broccoli florets. Round out the meal with Steamed White Rice.">
             <ingredient>
                 <name>Vegetable Oil</name>
