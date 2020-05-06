@@ -23,7 +23,7 @@
   <ion-slides [options]="recipeSlideOpts
   " class="recipe-slider">
     <ion-slide *ngFor="let recipe of recipes">
-      <div class="recipe-card">
+      <div class="recipe-card" [routerLink]="['/recipe', 'view', recipe.attr.url]">
         <div 
             [ngStyle]="{ 'background-image': 'url(/assets/shapes.svg)' }" 
             class="background-image ion-activatable ripple-parent">

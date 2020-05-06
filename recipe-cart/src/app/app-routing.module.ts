@@ -22,10 +22,10 @@ const routes: Routes = [
         loadChildren: () => import('./recipe/recipe-home/recipe-home.module').then( m => m.RecipeHomePageModule)
       },
 
-      // http://localhost:4200/recipe/view
+      // http://localhost:4200/recipe/view/url-for-recipe
       {
         // This is the path nested under /recipe
-        path: 'view',
+        path: 'view/:url',
         // This is the module/page that will load when we access this link. 
         loadChildren: () => import('./recipe/recipe-tabs/recipe-tabs.module').then( m => m.RecipeTabsPageModule)
       }
