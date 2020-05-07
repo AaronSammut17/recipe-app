@@ -1,6 +1,8 @@
 #ingredients {
     ion-label {
         font-weight: bold;
+        overflow: auto;
+        text-overflow: inherit;
 
         h6 {
             color: var(--ion-color-medium);
@@ -10,7 +12,7 @@
             text-transform: uppercase;
         }
 
-        ion-text{
+        ion-text {
             color: var(--ion-color-primary);
         }
     }

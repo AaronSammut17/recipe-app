@@ -1,4 +1,4 @@
-<app-recipe-header title="Curry" favorite="true"></app-recipe-header>
+<app-recipe-header [title]="recipe.attr.name" favorite="true"></app-recipe-header>
 
 <ion-content>
   <!-- Background element for the recipe banner that the summery overlaps. -->
@@ -8,14 +8,14 @@
   <ion-card class="ion-no-margin ion-margin-horizontal ion-margin-bottom" id="summary-card">
     <!-- The card header. -->
     <ion-card-header>
-      <ion-card-subtitle>Healthy</ion-card-subtitle>
-      <ion-card-title>Mediterranean Salad</ion-card-title>
+      <ion-card-subtitle>{{ recipe.attr.category }}</ion-card-subtitle>
+      <ion-card-title>{{ recipe.attr.name }}</ion-card-title>
     </ion-card-header>
 
     <!-- The card content. -->
     <ion-card-content>
       <!-- The recipe summery. -->
-      <p>This hearty salad makes a delicious lunch.</p>
+      <p>{{ recipe.attr.description }}</p>
 
       <div class="rating ion-margin-top ion-text-center">
       <!--
@@ -42,7 +42,7 @@
       <!-- The time label -->
       <ion-col>
         <ion-icon name="time-outline"></ion-icon>
-        <ion-label>25 min</ion-label>
+        <ion-label>{{ recipe.attr.duration }} min</ion-label>
       </ion-col>
 
       <!-- The calorie count label -->
@@ -54,7 +54,7 @@
       <!-- The serving size label -->
       <ion-col>
         <ion-icon name="restaurant-outline"></ion-icon>
-        <ion-label>Serves 4</ion-label>
+        <ion-label>Serves {{ recipe.attr.serves }}</ion-label>
       </ion-col>
     </ion-row>
   </ion-grid>

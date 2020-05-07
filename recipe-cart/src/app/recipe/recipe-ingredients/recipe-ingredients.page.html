@@ -1,20 +1,21 @@
-<app-recipe-header></app-recipe-header>
+<app-recipe-header [title]="recipe.attr.name"></app-recipe-header>
 
 <ion-content>
   <ion-list id="ingredients" lines="full">
-    <ion-item>
+    <ion-item *ngFor="let ingredient of recipe.ingredient">
       <!-- The image on the left of the item. -->
       <ion-thumbnail slot="start">
         <img src="/assets/shapes.svg" alt="">
       </ion-thumbnail>
 
       <!-- The item label. -->
-      <ion-label>Ingredient</ion-label>
+      <ion-label>{{ ingredient.name }}</ion-label>
 
       <!-- The measurement on the right. -->
-      <ion-label slot="end" class="ion-text-right">
+      <ion-label slot="end" class="ion-text-right" *ngIf="ingredient.measurement">
         <h6>Amount</h6>
-        <ion-text>200g</ion-text>
+        <ion-text>{{ ingredient.measurement[0]._ }}
+                  {{ ingredient.measurement[0].attr.type }}</ion-text>
       </ion-label>
     </ion-item>
   </ion-list>

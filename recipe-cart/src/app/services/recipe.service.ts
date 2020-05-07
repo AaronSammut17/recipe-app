@@ -113,6 +113,40 @@ export class RecipeService {
     }
 
     /**
+     * Retrieves a recipe from the data available.
+     * @param url The unique identifier for this recipe.
+     */
+    public getRecipe(url: string)
+    {
+      // Alternative for: find(c => c.recipe.find(r => r.attr.url == url))
+      // for (var c = 0; c < this._data.category.length; c++)
+      // {
+      //     var category = this._data.category[c];
+      
+      // Alternative for: c.recipe.find(r => r.attr.url == url)
+      //     for (var i = 0; i < category.recipe.length; i++)
+      //     {
+      //         var recipe = category.recipe[i];
+      //         if (recipe.attr.url == url)
+      //         {
+      //             return category;
+      //         }
+      //     }
+      // }
+
+      // Finds the category containing the recipe we want.
+      var category = this._data.category.find(c => c.recipe.find(r => r.attr.url == url));
+      
+      // The category (if found) will always have one recipe item inside.
+      var recipe = category.recipe[0];
+
+      // Reassign the category name so that we can access it in the component.
+      recipe.attr.category = category.attr.name;
+
+      return recipe;
+    }
+
+    /**
      * Creates an array of recipes from the data list.
      * @param shuffle Will randomize the order if true.
      * @param count Will limit the number of recipes if a value is given.
