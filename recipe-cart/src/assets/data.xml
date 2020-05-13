@@ -130,7 +130,7 @@
     </category>
 
     <category name="Eggcelent">
-        <recipe name="Hoisin Chicken" url="hoisin-chicken" serves="4" duration="20" description="Using store-bought hoisin sauce makes this chicken stir-fry easy and fast. You can substitute any quick-cooking vegetable, such as mushrooms, thinly sliced carrots, or broccoli florets. Round out the meal with Steamed White Rice.">
+        <recipe name="Test Recipe" url="test-recipe">
             <ingredient>
                 <name>Vegetable Oil</name>
                 <measurement type="tbsp">3</measurement>

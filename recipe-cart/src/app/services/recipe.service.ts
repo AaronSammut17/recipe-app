@@ -95,6 +95,18 @@ export class RecipeService {
     }
 
     /**
+     *  checks that the recipe data is valid.
+     *  @param recipe The recipe to check.
+     */
+    public checkRecipe(recipe: any): boolean{
+      // if there are no attributes in the object (loaded from XML)
+      if (!recipe.attr) return false;
+      if (!recipe.attr.name || !recipe.attr.url) return false;
+        
+      return true;
+    }
+
+    /**
      *  Creates an array of categories from th data list.
      */
     public getCategories(){
@@ -138,7 +150,7 @@ export class RecipeService {
       var category = this._data.category.find(c => c.recipe.find(r => r.attr.url == url));
       
       // The category (if found) will always have one recipe item inside.
-      var recipe = category.recipe[0];
+      var recipe = category.recipe.find(r => r.attr.url == url);
 
       // Reassign the category name so that we can access it in the component.
       recipe.attr.category = category.attr.name;
